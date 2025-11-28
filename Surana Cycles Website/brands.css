@@ -1,0 +1,64 @@
+.brands-page {
+    
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.brands-listing h3 {
+    font-size: 2em;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+}
+
+.brand-card {
+    background-color: #FFF;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color); 
+}
+
+.brand-card img {
+    width: 80%;
+    max-width: 150px;
+    height: auto;
+    background-color: #F1FAEE; 
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.brand-card h4 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.brand-card p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 25px;
+    min-height: 70px; 
+}
+
+
+.brand-button {
+    font-size: 0.85em;
+    padding: 8px 15px;
+    
+}

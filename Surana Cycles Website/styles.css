@@ -1,0 +1,422 @@
+/* ============================= */
+/* 1. CSS Reset and Base Styles */
+/* ============================= */
+* {
+    /* Standard box model for easier layout management */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Define CSS Variables for consistent branding */
+    --primary-color: #E63946; /* A strong, sporty red */
+    --secondary-color: #457B9D; /* A deep, cool blue */
+    --text-dark: #1D3557; 
+    --text-light: #F1FAEE;
+    --font-stack: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--text-light); /* Off-white background */
+}
+
+/* Base styling for links */
+a {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* Utility Class for page centering */
+.container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+/* ============================= */
+/* 2. Header and Navigation Styles */
+/* ============================= */
+
+.main-header {
+    background-color: var(--text-light);
+    border-bottom: 3px solid var(--primary-color); /* Highlight color */
+    padding: 10px 0;
+}
+
+/* Use Flexbox for layout inside the header */
+.main-header {
+    display: flex;
+    justify-content: space-between; /* Space out logo, nav, and utility */
+    align-items: center;
+    padding: 15px 40px; /* Padding inside the header */
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Styling for the main navigation list */
+.main-nav ul {
+    list-style: none;
+    display: flex; /* Display list items in a row */
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--secondary-color);
+}
+
+/* Styling for the user link and mobile menu toggle */
+.utility-nav {
+    display: flex;
+    align-items: center;
+}
+
+.user-link {
+    padding: 10px 15px;
+    border: 1px solid var(--text-dark);
+    border-radius: 5px;
+    margin-right: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.user-link:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+/* Hide the mobile menu toggle by default (for desktop) */
+.mobile-menu-toggle {
+    display: none; 
+}
+
+/* ============================= */
+/* 3. Home Page Content Styles */
+/* ============================= */
+
+/* --- A. Hero Banner Section --- */
+
+.hero-banner {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center;
+    padding: 80px 20px;
+    gap: 40px; /* Space between content and image */
+    background-color: var(--text-light);
+}
+
+.hero-content {
+    flex: 1; /* Take up remaining space */
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    /* For actual image: max-width: 100%; height: auto; border-radius: 8px; */
+    width: 100%; /* Placeholder width */
+    height: 300px; /* Placeholder height */
+    background-color: var(--secondary-color); /* Placeholder color */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Call-to-Action (CTA) Button Styling (Used widely) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #C5303D; /* Slightly darker primary color */
+    color: var(--text-light);
+}
+
+/* --- B. Featured Products Section --- */
+
+.featured-products {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.featured-products h3 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.product-grid {
+    display: grid;
+    /* Create three equal columns for product cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #FFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    /* Placeholder styling for product images */
+    width: 100%;
+    height: 200px;
+    background-color: #EEE; 
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-card h4 {
+    color: var(--secondary-color);
+    margin: 10px 0 5px;
+    font-size: 1.4em;
+}
+
+.product-card .category {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-card .view-details {
+    display: inline-block;
+    color: var(--text-dark);
+    padding: 8px 20px;
+    border: 1px solid var(--text-dark);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.product-card .view-details:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+/* --- C. Quick Links Section --- */
+
+.quick-links {
+    padding: 60px 20px;
+    background-color: #F8F8F8; /* Subtle background difference */
+    text-align: center;
+}
+
+.quick-links h3 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.link-modules {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.module-card {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--text-light);
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: left;
+}
+
+.module-card:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.module-card:hover h4,
+.module-card:hover p {
+    color: var(--text-light);
+}
+
+.module-card h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.module-card p {
+    color: var(--text-dark);
+}
+
+/* --- D. Footer Styling --- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    font-size: 0.9em;
+    border-top: 3px solid var(--secondary-color);
+}
+
+/* ============================= */
+/* 4. Category Page Styles */
+/* ============================= */
+
+/* --- A. Page Header and Main Layout --- */
+
+.category-page {
+    padding: 40px 20px;
+}
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.page-intro h2 {
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+.page-intro p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Two-Column Layout using Grid */
+.category-layout {
+    display: grid;
+    /* 1 part for the sidebar, 3 parts for the product listing */
+    grid-template-columns: 1fr 3fr; 
+    gap: 30px;
+}
+
+/* --- B. Filter Sidebar Styles --- */
+
+.sidebar {
+    padding: 20px;
+    background-color: #F8F8F8;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    height: fit-content; /* Ensure sidebar doesn't stretch full height of parent */
+    position: sticky; /* Keep filter visible when scrolling products */
+    top: 20px; /* Space from the top of the viewport */
+}
+
+.sidebar h3 {
+    font-size: 1.6em;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+    padding: 15px 0;
+    border-bottom: 1px dashed #CCC;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-group h4 {
+    font-size: 1.1em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: block; /* Stack checkboxes vertically */
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+    /* Customize checkbox appearance if needed */
+}
+
+.filter-group input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.filter-apply {
+    width: 100%;
+    margin-top: 20px;
+    /* Reuses .cta-button styling */
+}
+
+/* --- C. Product Listing Styles --- */
+
+.product-listing h3 {
+    font-size: 1.5em;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+/* Reusing .product-grid and .product-card from the home page */
+/* Override grid columns for the product listing area */
+.product-listing .product-grid {
+    /* 3 columns within the 3fr section */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}

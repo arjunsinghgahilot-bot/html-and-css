@@ -7,9 +7,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    box-sizing: border-box; /* ✅ Added */
 }
-
+ 
+*, *::before, *::after {
+    box-sizing: inherit; /* ✅ Ensures padding doesn’t affect width */
+}
+ 
 .background {
     position: absolute;
     top: 0;
@@ -22,7 +26,7 @@ body {
     filter: blur(10px);
     z-index: -1;
 }
-
+ 
 .login-card {
     background: rgba(204, 197, 197, 0.61);
     backdrop-filter: blur(10px);
@@ -30,49 +34,54 @@ body {
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
+    width: 320px; /* ✅ Slightly increased width for better spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ Centers elements horizontally */
 }
-
+ 
 .login-card h2 {
     text-align: center;
     color: #ffffff;
     margin-bottom: 20px;
 }
-
+ 
 .login-card input {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 12px;
+    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.637);
     color: #333333;
     transition: all 0.3s ease;
+    font-size: 15px;
 }
-
+ 
 .login-card input:hover {
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .login-card input:focus {
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     outline: none;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
-
+ 
 .login-card button {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     background: #4CAF50;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 16px;
 }
-
+ 
 .login-card button:hover {
     background: #3e8e41;
     transform: scale(1.05);

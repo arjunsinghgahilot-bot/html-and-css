@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycles Categories - Surana Cycles</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>Surana Cycles</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html" class="active">Cycles Categories</a></li>
+                <li><a href="brands.html">Brands</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="shimano.html">Shimano</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="storelocator.html">Store Locator</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="utility-nav">
+            <a href="user.html" class="user-link">User / Account</a>
+            <button class="mobile-menu-toggle">Menu</button>
+        </div>
+    </header>
+
+    <main class="category-page container">
+
+        <section class="page-intro">
+            <h2>Explore Our Cycle Range</h2>
+            <p>Find the perfect bike for your terrain and riding style. Use the filters to narrow down your selection.</p>
+        </section>
+
+        <div class="category-layout">
+
+            <aside class="sidebar">
+                <h3>Filter Cycles</h3>
+                
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <input type="range" min="100" max="5000" value="5000" id="price-range">
+                    <p>Max Price: ₹<span id="current-price">5000</span></p>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Frame Size (in inches)</h4>
+                    <label><input type="checkbox" name="size" value="16"> 16"</label>
+                    <label><input type="checkbox" name="size" value="18"> 18"</label>
+                    <label><input type="checkbox" name="size" value="20"> 20"</label>
+                    <label><input type="checkbox" name="size" value="22"> 22"</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Key Features</h4>
+                    <label><input type="checkbox" name="feature" value="disc-brakes"> Disc Brakes</label>
+                    <label><input type="checkbox" name="feature" value="carbon-frame"> Carbon Frame</label>
+                    <label><input type="checkbox" name="feature" value="suspension"> Full Suspension</label>
+                </div>
+
+                <button class="cta-button filter-apply">Apply Filters</button>
+            </aside>
+
+            <section class="product-listing">
+                
+                <h3>Showing 12 Results</h3>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="images/road-racer_.jpg" alt="A high-end road racing bike">
+                        <h4>Road Racer Pro X</h4>
+                        <p class="category">Road Cycling</p>
+                        <p class="price">₹3,500</p>
+                        <a href=w"#" class="view-details">View Details</a>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="images/TrailblazerPRO1website3-2.webp" alt="A rugged mountain bike">
+                        <h4>Trail Blazer 29er</h4>
+                        <p class="category">Mountain Biking</p>
+                        <p class="price">₹2,100</p>
+                        <a href="#" class="view-details">View Details</a>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="images/Essential-features-for-urban-commuter-bikes.jpg" alt="A versatile city hybrid bike">
+                        <h4>Urban Commuter Max</h4>
+                        <p class="category">Hybrid / City</p>
+                        <p class="price">₹850</p>
+                        <a href="#" class="view-details">View Details</a>
+                    </article>
+
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p class="container">&copy; 2025 Surana Cycles. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
